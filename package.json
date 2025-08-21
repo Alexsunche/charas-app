@@ -1,0 +1,37 @@
+{
+  "name": "my-app",
+  "private": true,
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "scripts": {
+    "dev:api": "pnpm --filter api start:dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:all": "concurrently -n API,WEB -c auto \"pnpm --filter api start:dev\" \"pnpm --filter web dev\"",
+    "build": "pnpm -r build",
+    "generate": "pnpm --filter web generate",
+    "lint": "eslint . --ext .ts,.tsx,.js,.vue --ignore-path .gitignore",
+    "format": "prettier --write .",
+    "typecheck": "tsc -p services/api/tsconfig.json --noEmit && tsc -p infra/cdk/tsconfig.json --noEmit",
+    "bootstrap:cdk": "pnpm --filter cdk bootstrap",
+    "synth:cdk": "pnpm --filter cdk synth",
+    "deploy:cdk": "pnpm --filter cdk deploy",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.1",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.6.2",
+    "typescript": "^5.5.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json,md,yaml,yml}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  // форматировать при сохранении
+  "editor.formatOnSave": true,
+
+  // Prettier как форматтер по умолчанию
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // на всякий случай — явно для нужных языков
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // ESLint: авто-фиксы при сохранении
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // чтобы Prettier учитывал .editorconfig
+  "prettier.useEditorConfig": true,
+
+  // хорошая связка с Volar
+  "vue.features.takeOverMode.enabled": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+
+  "vue.features.takeOverMode.enabled": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

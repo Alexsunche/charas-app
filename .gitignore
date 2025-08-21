@@ -1,0 +1,23 @@
+# deps
+node_modules
+
+
+# builds/outputs
+.dist
+.nuxt
+.output
+.next
+coverage
+cdk.out
+dist
+
+
+# env & logs
+.env
+.env.*
+*.log
+*.pid
+
+
+# misc
+.DS_Store
