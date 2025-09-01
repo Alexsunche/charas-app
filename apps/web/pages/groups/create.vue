@@ -17,7 +17,6 @@
 
 <script setup lang="ts">
 import { NButton, NCard, NForm, NFormItem, NInput, NSelect, NSpace, type FormRules } from 'naive-ui'
-import { ref } from 'vue'
 import { useLocal } from '~/composables/useLocal'
 
 const { createGroup } = useLocal()

@@ -27,7 +27,7 @@ import {
 
 const theme: GlobalThemeOverrides = {
   common: {
-    primaryColor: '#32a89e',
+    primaryColor: '#E6DFF1',
   },
 }
 </script>

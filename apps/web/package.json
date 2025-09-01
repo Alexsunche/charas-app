@@ -3,17 +3,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev -p 3001 --host 127.0.0.1",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview -p 3001 --host 127.0.0.1"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.2.0",
+    "@pinia/nuxt": "^0.11.2",
     "@vueuse/core": "^13.7.0",
     "naive-ui": "^2.42.0",
-    "nuxt": "^3.12.0"
+    "nuxt": "^3.12.0",
+    "ofetch": "^1.4.1",
+    "pinia": "^3.0.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",

@@ -1,21 +1,22 @@
-// apps/web/nuxt.config.ts
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
 
-  // подключаем один общий файл стилей
-  css: ['~/assets/main.css'],
-
-  // Tailwind v4 через Vite-плагин
-  vite: {
-    plugins: [tailwindcss()],
+  // 👇 сюда сводим порт/хост дев-сервера
+  devServer: {
+    port: 3001,
+    host: '127.0.0.1', // поменяй на '0.0.0.0', если нужно открыть по LAN/с телефона
   },
 
-  modules: [], // важно: без '@nuxtjs/tailwindcss'
-
+  css: ['~/assets/main.css'],
+  vite: { plugins: [tailwindcss()] },
+  modules: ['@pinia/nuxt'],
   runtimeConfig: {
-    public: { apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:3000' },
+    public: {
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:3000',
+      useLocalRepo: false, // false = работаем с реальным API
+    },
   },
 })

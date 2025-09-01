@@ -18,7 +18,6 @@
 
 <script setup lang="ts">
 import { NCard, NGrid, NGridItem, NText, NThing } from 'naive-ui'
-import { onMounted, ref } from 'vue'
 import { useLocal } from '../../composables/useLocal'
 
 const { listGroups } = useLocal()

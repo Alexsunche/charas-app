@@ -1,11 +1,11 @@
+// services/api/src/app.module.ts
 import { Module } from '@nestjs/common'
 import { AppController } from './app.controller'
-import { ItemsController } from './items.controller'
-import { DbService } from './db.service'
-
+import { AuthModule } from './auth/auth.module' // ← путь и импорт
 
 @Module({
-controllers: [AppController, ItemsController],
-providers: [DbService]
+  imports: [AuthModule], // ← ОБЯЗАТЕЛЬНО
+  controllers: [AppController],
+  providers: [],
 })
 export class AppModule {}

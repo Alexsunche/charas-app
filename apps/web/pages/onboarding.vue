@@ -17,7 +17,6 @@
 
 <script setup lang="ts">
 import { NButton, NCard, NForm, NFormItem, NInput, NSpace, type FormRules } from 'naive-ui'
-import { onMounted, ref } from 'vue'
 const { getProfile, saveProfile } = useLocal()
 
 const formRef = ref()
